@@ -65,7 +65,7 @@ def download_cats(folder):
 
 def display_cats(folder):
     """
-    
+
 
     :param folder:
     :return:
