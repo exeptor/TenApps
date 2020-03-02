@@ -24,7 +24,7 @@ def main():
         print('-------------- MATCH -------------')
         print('file: {}'.format(m.file))
         print('line: {}'.format(m.line))
-        print('match: {}'.format(m.text.strip()))
+        print('match: {}'.format(m.text))
         print()
 
     print('-------------- SUMMARY -------------')
