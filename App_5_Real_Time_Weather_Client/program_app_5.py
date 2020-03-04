@@ -1,7 +1,23 @@
 import requests
+
+# todo: why importing country_domain with with the full path fix the Pycharm error message, but fails the execution of
+#  the program if the same file is called in command line?
+#  Example:
+#  ------------------------------ Run <program_app_5> in cmd --------------------------------------
+#   (testnv) C:\Users\Tsvetomila\Desktop\PythonQA\Ten_Apps_Course\App_5_Real_Time_Weather_Client>python program_app_5.py
+#   Traceback (most recent call last):
+#     File "program_app_5.py", line 2, in <module>
+#       import Ten_Apps_Course.App_5_Real_Time_Weather_Client.country_domain as ctrdom
+#   ModuleNotFoundError: No module named 'Ten_Apps_Course'
+#   ------------------------------------------------------------------------------------------------
 import Ten_Apps_Course.App_5_Real_Time_Weather_Client.country_domain as ctrdom
+
 import bs4
 import collections
+
+# todo: why importing the module directly cause Pycharm to throw an error 'No module named country_domain', but when
+#  used in the code bellow all methods defined in the country_domain are successfully called/invoked.
+# import country_domain as ctrdom
 
 WeatherReport = collections.namedtuple('WeatherReport', 'cond, temp, loc')
 
@@ -20,7 +36,7 @@ def main():
         report = get_weather_from_html(html)
         print()
         print('-------------------------------------------------')
-        print('The temp in {} is {} °C and is {}.'.format(report.loc, report.temp, report.cond))
+        print('The temp in {} is {} °C and {}.'.format(report.loc, report.temp, report.cond))
         print('-------------------------------------------------')
     except:
         print('Oops, something went wrong! Check the name of the city and/or country.')
