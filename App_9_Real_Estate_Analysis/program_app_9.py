@@ -93,6 +93,10 @@ def query_data(data):
     print('Average 2-bedrooms home is ${:,}, {} baths and {} sq ft.'
           .format(int(two_bed_avg_price), round(two_bed_avg_baths, 1), round(two_bed_avg_sq_ft, 1)))
 
+# todo:
+#  - fix the code bellow removing the announce() method.
+#  - add simple functionality to ask user if he/she wants to go over all data or aver a defined limit (eg. first 5 rows)
+
 #     two_bed_home = (
 #         p
 #         for p in data
